@@ -1,4 +1,4 @@
-import { type Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config: Config = {
   darkMode: "class",
@@ -10,14 +10,17 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        grid: "linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px)",
+        grid: `
+          linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px)
+        `,
       },
       backgroundSize: {
         grid: "24px 24px",
       },
     },
   },
-  plugins: [require("@tailwindcss/typography"), require("tailwindcss-animate")],
-}
+  plugins: [],
+};
 
-export default config
+export default config;
